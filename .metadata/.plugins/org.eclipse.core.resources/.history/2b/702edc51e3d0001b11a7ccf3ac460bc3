@@ -15,12 +15,13 @@
 
     <bean id="myCoach" class="com.luv2code.springdemo.BaseballCoach">
 <!--  set up a constructor injection-->
-<constructor-arg ref="myFortune"/>
+< constructor-arg ref="myFortune"/>
 </bean>
+
 
 </beans>
 
- 
+
 
 
 

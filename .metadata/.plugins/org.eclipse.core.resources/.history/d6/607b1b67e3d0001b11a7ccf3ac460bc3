@@ -18,6 +18,7 @@
 <constructor-arg ref="myFortune"/>
 </bean>
 
+
 </beans>
 
  
