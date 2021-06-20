@@ -26,7 +26,7 @@
 
 <!-- injext literal values-->
 <property name="emailAddress" value="${foo.email}"/>
-	<property name="team" value="${foo.team}"/>
+	<property name="team" value="Sunrisers Hyderabad"/>
 </bean>
 
 </beans>
