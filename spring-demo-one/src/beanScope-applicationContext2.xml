@@ -11,7 +11,7 @@
 	<bean id="myFortuneService" class="com.luv2code.springdemo.HappyFortuneService">
 	</bean>
 
-	<bean id="myCoach" class="com.luv2code.springdemo.BaseballCoach">
+	<bean id="myCoach" class="com.luv2code.springdemo.BaseballCoach" scope="prototype">
 		<!--  set up a constructor injection-->
 		<constructor-arg ref="myFortuneService" />
 	</bean>
