@@ -16,8 +16,7 @@ public class HelloSpringApp {
 //		call methods on the bean 
 		System.out.println(theCoach.getDailyWorkout());
 		
-//		lets call our new methods for fortune service
-		System.out.println(theCoach.getDailyFortune());
+//		lets call our new methods for fotune service
 		
 //		close the context
 		context.close();
