@@ -2,6 +2,7 @@
     <wb-module deploy-name="spring-mvc-demo">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Java Resources"/>
         <property name="context-root" value="spring-mvc-demo"/>
         <property name="java-output-path" value="/spring-mvc-demo/build/classes"/>
     </wb-module>
