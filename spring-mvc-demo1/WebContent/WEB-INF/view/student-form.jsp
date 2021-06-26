@@ -17,6 +17,13 @@ Last name: <form:input path="lastName" />
 Country: <form:select path="country">
 			<form:options items="${student.countryOptions}" />
 		</form:select>
+	<br><br>
+	
+	Favourite Language: 
+	JAVA<form:radiobutton path="favouriteLanguage"  value="Java" />
+	C<form:radiobutton path="favouriteLanguage"  value="C" />
+	Python<form:radiobutton path="favouriteLanguage"  value="Python" />
+	JavaScript<form:radiobutton path="favouriteLanguage"  value="Ruby" />
 		
 		<input type="submit" value="Submit" />
 	</form:form>
