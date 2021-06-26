@@ -17,14 +17,24 @@ Last name: <form:input path="lastName" />
 Country: <form:select path="country">
 			<form:options items="${student.countryOptions}" />
 		</form:select>
-	<br><br>
+		<br>
+		<br>
 	
-	Favourite Language: 
-	JAVA<form:radiobutton path="favouriteLanguage"  value="Java" />
-	C<form:radiobutton path="favouriteLanguage"  value="C" />
-	Python<form:radiobutton path="favouriteLanguage"  value="Python" />
-	JavaScript<form:radiobutton path="favouriteLanguage"  value="Ruby" />
+Favourite Language: 
+	JAVA<form:radiobutton path="favouriteLanguage" value="Java" />
+	C<form:radiobutton path="favouriteLanguage" value="C" />
+	Python<form:radiobutton path="favouriteLanguage" value="Python" />
+	JavaScript<form:radiobutton path="favouriteLanguage" value="Ruby" />
+		<br>
+		<br>
 		
+		
+	Operating Systems:
+	Linux <form:checkbox path="operatingSystems" value="Linux" />
+	MAC OS <form:checkbox path="operatingSystems" value="Mac Os" />
+	Windows <form:checkbox path="operatingSystems" value="Ms Windows" />
+
+
 		<input type="submit" value="Submit" />
 	</form:form>
 
