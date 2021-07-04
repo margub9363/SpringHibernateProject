@@ -17,33 +17,39 @@ public class CreateCourseAndStudentDemo {
 
 //		create session factory 
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Instructor.class)
-				.addAnnotatedClass(InstructorDetail.class).addAnnotatedClass(Course.class).addAnnotatedClass(Review.class).buildSessionFactory();
+				.addAnnotatedClass(InstructorDetail.class).addAnnotatedClass(Course.class)
+				.addAnnotatedClass(Review.class).addAnnotatedClass(Student.class).buildSessionFactory();
 
 //		create a session
 		Session session = factory.getCurrentSession();
 
 		try {
 
-
 //			start a transaction
 			session.beginTransaction();
 
-
 //			create a course
 			Course tempCourse = new Course("Pacman - How to Score one million points");
-			
-//			add some reviews
-			tempCourse.addReview(new Review("Great course ... loved it!"));
-			tempCourse.addReview(new Review("Cool course, job well done"));
-			tempCourse.addReview(new Review("Bullshit!!!"));
-			
-//			save the course ... and leverage the cascade all
-			System.out.println("Saving the Course");
-			System.out.println(tempCourse);
-			System.out.println(tempCourse.getReviews());
-			
+
+//			save the course
+			System.out.println("\nSaving the Course...");
 			session.save(tempCourse);
-			
+			System.out.println("Saved the Course: " + tempCourse);
+
+//			create the students
+			Student tempStudent1 = new Student("John", "Doe", "john@luv2code.com");
+			Student tempStudent2 = new Student("Mary", "Public", "mary@luv2code.com");
+
+//			add students to the course
+			tempCourse.addStudent(tempStudent1);
+			tempCourse.addStudent(tempStudent2);
+
+//			save the course
+			System.out.println("\nSaving students ...");
+			session.save(tempStudent1);
+			session.save(tempStudent2);
+			System.out.println("Saved students: " + tempCourse.getStudents());
+
 //			commit transaction
 			session.getTransaction().commit();
 
@@ -52,7 +58,7 @@ public class CreateCourseAndStudentDemo {
 
 //			add clean up code
 			session.close();
-			
+
 			factory.close();
 		}
 

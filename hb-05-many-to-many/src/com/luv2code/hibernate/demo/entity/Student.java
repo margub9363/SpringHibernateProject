@@ -38,7 +38,7 @@ public class Student {
 	private List<Course> courses;
 
 	public Student() {
-		super();
+//		super();
 		// TODO Auto-generated constructor stub
 	}
 
